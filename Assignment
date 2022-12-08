@@ -1,0 +1,28 @@
+/* This App displays whether it is an A day or B day for a day based on the month and day entered by the user
+ */
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    String month;
+    int day;
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter the month: ");
+    month = input.nextLine();
+    System.out.print("Enter the day: ");
+    day = input.nextInt();
+    input.close();
+    if (month.equals("January") && (day == 3 || day == 5 || day == 9 || day == 11 || day == 13 || day == 18 || day == 20 || day == 25 || day == 27 || day == 31)){
+      System.out.println("This is an A day");
+    } else if (month.equals("February") && (day == 2 || day == 6 || day == 8 || day == 10 || day == 14 || day == 16 || day == 21 || day == 23 || day == 27)){
+      System.out.println("This is an A day");
+    } else if (month.equals("January") && (day == 4 || day == 6 || day == 10 || day == 12 || day == 18 || day == 19 || day == 24 || day == 26 || day == 30)){
+      System.out.println("This is a B day");
+    } else if (month.equals("February") && (day == 1 || day == 3 || day == 7 || day == 9 || day == 13 || day == 15 || day == 17 || day == 22 || day == 24 || day == 28)){
+      System.out.println("This is a B day");
+    } else {
+      System.out.println("This is not a school day.");
+    }
+  }
+}
+
+    
